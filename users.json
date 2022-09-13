@@ -1,0 +1,52 @@
+{
+    "users":[
+        {   
+            "id":0,
+            "nombre": "Ana",
+            "edad":20,
+            "pais":"Argentina"
+        },
+        {
+            "id":1,
+            "nombre": "Bruno",
+            "edad":35,
+            "pais":"Ecuador"
+        },
+        {
+            "id":2,
+            "nombre": "Carlos",
+            "edad":25,
+            "pais":"Colombia"
+        },
+        {
+            "id":3,
+            "nombre": "Diana",
+            "edad":30,
+            "pais":"Dinamarca"
+        },
+        {
+            "id":4,
+            "nombre": "Eduardo",
+            "edad":18,
+            "pais":"España"
+        },
+        {
+            "id":5,
+            "nombre": "Frank",
+            "edad":34,
+            "pais":"Finlandia"
+        },
+        {
+            "id":6,
+            "nombre": "Gloria",
+            "edad":45,
+            "pais":"Grecia"
+        },
+        {
+            "id":7,
+            "nombre": "Hector",
+            "edad":28,
+            "pais":"Holanda"
+        }
+    ]
+}
