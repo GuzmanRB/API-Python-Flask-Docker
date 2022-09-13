@@ -16,18 +16,38 @@ class crud:
         for user in users:
             if user['id']==id:
                 return json.dumps(user)
+        return False
 
     def postOne(self,user):
-        user=json.dumps(user)
         id=randint(0,100)
-        user['id']=id
         users=self.data['users']
-        print(users)
-        users.append(user)
+        users.append({
+            "id":id,
+            "nombre":user["nombre"],
+            "edad":user["edad"],
+            "pais":user["pais"]
+        })
         self.data['users']=users
         return 'User save'
 
-    def putOne():
-        pass
-    def deleteOne():
-        pass
+    def putOne(self,id,user):
+        user=self.getOne(id)
+        if user is False:
+            return 'User dont exist'
+        users=self.data['users']
+        for u in users:
+            if u['id']==id:
+                u=user
+        self.data['users']=users
+        return 'User update'
+        
+    def deleteOne(self,id,user):
+        user=self.getOne(id)
+        if user is False:
+            return 'User dont exist'
+        users=self.data['users']
+        for u in users:
+            if u['id']==id:
+                users.remove(u)
+        self.data['users']=users
+        return 'User delete'

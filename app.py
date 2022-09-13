@@ -18,12 +18,14 @@ def newUser():
     return crud.postOne(user)
 
 @app.route('/users/<int:id>', methods=['PUT'])
-def updateUser():
-    return crud.putOne()
+def updateUser(id):
+    user=request.json
+    return crud.putOne(id,user)
 
 @app.route('/users/<int:id>', methods=['DELETE'])
-def deleteUser():
-    return crud.deleteOne()
+def deleteUser(id):
+    user=request.json
+    return crud.deleteOne(id,user)
 
 
 if __name__=='__main__':
